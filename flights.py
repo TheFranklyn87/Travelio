@@ -1,13 +1,23 @@
 from amadeus import Client, ResponseError
+from dotenv import load_dotenv
+import os
 import csv
 
-# ========== 1. Configure your API ==========
+# ========== 1. Load environment variables ==========
+load_dotenv()
+API_KEY = os.getenv("AMADEUS_API_KEY")
+API_SECRET = os.getenv("AMADEUS_API_SECRET")
+
+if not API_KEY or not API_SECRET:
+    raise Exception("Please set your API key and secret in the .env file")
+
+# ========== 2. Configure Amadeus client ==========
 amadeus = Client(
-    client_id="RRUDphGrKTCV2IKg6hwrNWDQJRBbLqAW",
-    client_secret="iCzUFFA0e9YVDcGB"
+    client_id=API_KEY,
+    client_secret=API_SECRET
 )
 
-# ========== 2. Set search parameters ==========
+# ========== 3. Set search parameters ==========
 origin = "YYZ"  # Your city (Toronto)
 destinations = ["JFK", "LAX", "MIA"]  # List of destinations
 departure_date = "2026-06-01"
