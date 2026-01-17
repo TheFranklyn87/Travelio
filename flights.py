@@ -5,6 +5,7 @@ import csv
 from datetime import datetime, timedelta
 import random
 
+
 # First step : Load API credentials
 load_dotenv()
 API_KEY = os.getenv("AMADEUS_API_KEY")
