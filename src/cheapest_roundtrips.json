@@ -5,7 +5,8 @@
     "DepartureDate": "2026-02-08",
     "ReturnDate": "2026-02-15",
     "Price": 209.79,
-    "AveragePrice": 225.45
+    "AveragePrice": 225.45,
+    "Airline": "AC"
   },
   {
     "Origin": "YVR",
@@ -13,7 +14,8 @@
     "DepartureDate": "2026-02-18",
     "ReturnDate": "2026-02-23",
     "Price": 223.65,
-    "AveragePrice": 241.23
+    "AveragePrice": 241.23,
+    "Airline": "WS"
   },
   {
     "Origin": "YVR",
@@ -21,7 +23,8 @@
     "DepartureDate": "2026-02-01",
     "ReturnDate": "2026-02-06",
     "Price": 87.07,
-    "AveragePrice": 87.07
+    "AveragePrice": 87.07,
+    "Airline": "F8"
   },
   {
     "Origin": "YVR",
@@ -29,7 +32,8 @@
     "DepartureDate": "2026-02-01",
     "ReturnDate": "2026-02-08",
     "Price": 90.48,
-    "AveragePrice": 142.49
+    "AveragePrice": 142.49,
+    "Airline": "WS"
   },
   {
     "Origin": "YVR",
@@ -37,7 +41,8 @@
     "DepartureDate": "2026-02-03",
     "ReturnDate": "2026-02-09",
     "Price": 122.37,
-    "AveragePrice": 206.57
+    "AveragePrice": 206.57,
+    "Airline": "F8"
   },
   {
     "Origin": "YVR",
@@ -45,7 +50,8 @@
     "DepartureDate": "2026-02-02",
     "ReturnDate": "2026-02-07",
     "Price": 347.13,
-    "AveragePrice": 543.48
+    "AveragePrice": 543.48,
+    "Airline": "F8"
   },
   {
     "Origin": "YVR",
@@ -53,7 +59,8 @@
     "DepartureDate": "2026-02-03",
     "ReturnDate": "2026-02-10",
     "Price": 167.0,
-    "AveragePrice": 287.9
+    "AveragePrice": 287.9,
+    "Airline": "UA"
   },
   {
     "Origin": "YVR",
@@ -61,7 +68,8 @@
     "DepartureDate": "2026-02-01",
     "ReturnDate": "2026-02-07",
     "Price": 195.97,
-    "AveragePrice": 328.63
+    "AveragePrice": 328.63,
+    "Airline": "F8"
   },
   {
     "Origin": "YVR",
@@ -69,7 +77,8 @@
     "DepartureDate": "2026-02-08",
     "ReturnDate": "2026-02-13",
     "Price": 181.7,
-    "AveragePrice": 266.97
+    "AveragePrice": 266.97,
+    "Airline": "AC"
   },
   {
     "Origin": "YVR",
@@ -77,7 +86,8 @@
     "DepartureDate": "2026-01-18",
     "ReturnDate": "2026-01-23",
     "Price": 613.95,
-    "AveragePrice": 636.38
+    "AveragePrice": 636.38,
+    "Airline": "NH"
   },
   {
     "Origin": "YVR",
@@ -85,7 +95,8 @@
     "DepartureDate": "2026-01-18",
     "ReturnDate": "2026-01-23",
     "Price": 434.41,
-    "AveragePrice": 441.79
+    "AveragePrice": 441.79,
+    "Airline": "AC"
   },
   {
     "Origin": "YVR",
@@ -93,7 +104,8 @@
     "DepartureDate": "2026-01-18",
     "ReturnDate": "2026-01-23",
     "Price": 368.32,
-    "AveragePrice": 373.03
+    "AveragePrice": 373.03,
+    "Airline": "AC"
   },
   {
     "Origin": "YVR",
@@ -101,7 +113,8 @@
     "DepartureDate": "2026-02-08",
     "ReturnDate": "2026-02-13",
     "Price": 301.4,
-    "AveragePrice": 402.7
+    "AveragePrice": 402.7,
+    "Airline": "UA"
   },
   {
     "Origin": "YVR",
@@ -109,7 +122,8 @@
     "DepartureDate": "2026-02-08",
     "ReturnDate": "2026-02-13",
     "Price": 188.0,
-    "AveragePrice": 291.94
+    "AveragePrice": 291.94,
+    "Airline": "WS"
   },
   {
     "Origin": "YVR",
@@ -117,7 +131,8 @@
     "DepartureDate": "2026-01-21",
     "ReturnDate": "2026-01-26",
     "Price": 951.93,
-    "AveragePrice": 982.24
+    "AveragePrice": 982.24,
+    "Airline": "UA"
   },
   {
     "Origin": "YYZ",
@@ -125,7 +140,8 @@
     "DepartureDate": "2026-02-08",
     "ReturnDate": "2026-02-15",
     "Price": 131.08,
-    "AveragePrice": 215.16
+    "AveragePrice": 215.16,
+    "Airline": "WS"
   },
   {
     "Origin": "YYZ",
@@ -133,7 +149,8 @@
     "DepartureDate": "2026-02-08",
     "ReturnDate": "2026-02-15",
     "Price": 123.7,
-    "AveragePrice": 220.33
+    "AveragePrice": 220.33,
+    "Airline": "WS"
   },
   {
     "Origin": "YYZ",
@@ -141,7 +158,8 @@
     "DepartureDate": "2026-02-08",
     "ReturnDate": "2026-02-15",
     "Price": 202.21,
-    "AveragePrice": 317.61
+    "AveragePrice": 317.61,
+    "Airline": "AC"
   },
   {
     "Origin": "YYZ",
@@ -149,7 +167,8 @@
     "DepartureDate": "2026-02-03",
     "ReturnDate": "2026-02-10",
     "Price": 157.29,
-    "AveragePrice": 247.07
+    "AveragePrice": 247.07,
+    "Airline": "AC"
   },
   {
     "Origin": "YYZ",
@@ -157,7 +176,8 @@
     "DepartureDate": "2026-02-03",
     "ReturnDate": "2026-02-10",
     "Price": 128.33,
-    "AveragePrice": 217.37
+    "AveragePrice": 217.37,
+    "Airline": "WS"
   },
   {
     "Origin": "YYZ",
@@ -165,7 +185,8 @@
     "DepartureDate": "2026-02-08",
     "ReturnDate": "2026-02-14",
     "Price": 323.15,
-    "AveragePrice": 471.78
+    "AveragePrice": 471.78,
+    "Airline": "WS"
   },
   {
     "Origin": "YYZ",
@@ -173,7 +194,8 @@
     "DepartureDate": "2026-02-08",
     "ReturnDate": "2026-02-14",
     "Price": 201.83,
-    "AveragePrice": 462.39
+    "AveragePrice": 462.39,
+    "Airline": "AA"
   },
   {
     "Origin": "YYZ",
@@ -181,7 +203,8 @@
     "DepartureDate": "2026-02-02",
     "ReturnDate": "2026-02-09",
     "Price": 292.75,
-    "AveragePrice": 473.2
+    "AveragePrice": 473.2,
+    "Airline": "F8"
   },
   {
     "Origin": "YYZ",
@@ -189,7 +212,8 @@
     "DepartureDate": "2026-02-01",
     "ReturnDate": "2026-02-06",
     "Price": 198.09,
-    "AveragePrice": 247.7
+    "AveragePrice": 247.7,
+    "Airline": "F8"
   },
   {
     "Origin": "YYZ",
@@ -197,7 +221,8 @@
     "DepartureDate": "2026-01-18",
     "ReturnDate": "2026-01-23",
     "Price": 798.6,
-    "AveragePrice": 810.48
+    "AveragePrice": 810.48,
+    "Airline": "NH"
   },
   {
     "Origin": "YYZ",
@@ -205,7 +230,8 @@
     "DepartureDate": "2026-02-01",
     "ReturnDate": "2026-02-08",
     "Price": 434.02,
-    "AveragePrice": 453.81
+    "AveragePrice": 453.81,
+    "Airline": "AC"
   },
   {
     "Origin": "YYZ",
@@ -213,7 +239,8 @@
     "DepartureDate": "2026-01-18",
     "ReturnDate": "2026-01-23",
     "Price": 393.77,
-    "AveragePrice": 451.62
+    "AveragePrice": 451.62,
+    "Airline": "AC"
   },
   {
     "Origin": "YYZ",
@@ -221,7 +248,8 @@
     "DepartureDate": "2026-02-08",
     "ReturnDate": "2026-02-13",
     "Price": 219.68,
-    "AveragePrice": 282.2
+    "AveragePrice": 282.2,
+    "Airline": "F8"
   },
   {
     "Origin": "YYZ",
@@ -229,7 +257,8 @@
     "DepartureDate": "2026-02-09",
     "ReturnDate": "2026-02-14",
     "Price": 276.38,
-    "AveragePrice": 435.54
+    "AveragePrice": 435.54,
+    "Airline": "WS"
   },
   {
     "Origin": "YYZ",
@@ -237,7 +266,8 @@
     "DepartureDate": "2026-01-21",
     "ReturnDate": "2026-01-27",
     "Price": 707.02,
-    "AveragePrice": 874.32
+    "AveragePrice": 874.32,
+    "Airline": "AC"
   },
   {
     "Origin": "YVR",
@@ -245,7 +275,8 @@
     "DepartureDate": "2026-01-18",
     "ReturnDate": "2026-01-23",
     "Price": 88.51,
-    "AveragePrice": 88.51
+    "AveragePrice": 88.51,
+    "Airline": "WS"
   },
   {
     "Origin": "SEA",
@@ -253,7 +284,8 @@
     "DepartureDate": "2026-02-01",
     "ReturnDate": "2026-02-06",
     "Price": 327.64,
-    "AveragePrice": 604.7
+    "AveragePrice": 604.7,
+    "Airline": "AA"
   },
   {
     "Origin": "SEA",
@@ -261,7 +293,8 @@
     "DepartureDate": "2026-02-01",
     "ReturnDate": "2026-02-06",
     "Price": 323.65,
-    "AveragePrice": 534.27
+    "AveragePrice": 534.27,
+    "Airline": "UA"
   },
   {
     "Origin": "SEA",
@@ -269,7 +302,8 @@
     "DepartureDate": "2026-02-08",
     "ReturnDate": "2026-02-13",
     "Price": 195.4,
-    "AveragePrice": 399.71
+    "AveragePrice": 399.71,
+    "Airline": "AA"
   },
   {
     "Origin": "SEA",
@@ -277,7 +311,8 @@
     "DepartureDate": "2026-02-01",
     "ReturnDate": "2026-02-06",
     "Price": 207.97,
-    "AveragePrice": 398.87
+    "AveragePrice": 398.87,
+    "Airline": "UA"
   },
   {
     "Origin": "SEA",
@@ -285,7 +320,8 @@
     "DepartureDate": "2026-02-08",
     "ReturnDate": "2026-02-14",
     "Price": 234.13,
-    "AveragePrice": 585.68
+    "AveragePrice": 585.68,
+    "Airline": "UA"
   },
   {
     "Origin": "SEA",
@@ -293,7 +329,8 @@
     "DepartureDate": "2026-02-08",
     "ReturnDate": "2026-02-14",
     "Price": 186.4,
-    "AveragePrice": 325.58
+    "AveragePrice": 325.58,
+    "Airline": "UA"
   },
   {
     "Origin": "SEA",
@@ -301,7 +338,8 @@
     "DepartureDate": "2026-02-08",
     "ReturnDate": "2026-02-14",
     "Price": 556.61,
-    "AveragePrice": 793.51
+    "AveragePrice": 793.51,
+    "Airline": "AA"
   },
   {
     "Origin": "SEA",
@@ -309,7 +347,8 @@
     "DepartureDate": "2026-02-08",
     "ReturnDate": "2026-02-14",
     "Price": 100.7,
-    "AveragePrice": 254.22
+    "AveragePrice": 254.22,
+    "Airline": "AA"
   },
   {
     "Origin": "SEA",
@@ -317,7 +356,8 @@
     "DepartureDate": "2026-02-07",
     "ReturnDate": "2026-02-12",
     "Price": 57.7,
-    "AveragePrice": 195.36
+    "AveragePrice": 195.36,
+    "Airline": "UA"
   },
   {
     "Origin": "SEA",
@@ -325,6 +365,7 @@
     "DepartureDate": "2026-02-07",
     "ReturnDate": "2026-02-14",
     "Price": 503.48,
-    "AveragePrice": 608.17
+    "AveragePrice": 608.17,
+    "Airline": "UA"
   }
 ]

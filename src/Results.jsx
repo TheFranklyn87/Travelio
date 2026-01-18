@@ -19,6 +19,17 @@ const CITY_NAMES = {
   YQB: "Quebec City",
   YYJ: "Victoria",
   YOW: "Ottawa",
+  YVR: "Vancouver",
+  YLW: "Kelowna",
+};
+
+const AIRLINE_INFO = {
+  WS: { name: "WestJet", url: "https://www.westjet.com" },
+  AC: { name: "Air Canada", url: "https://www.aircanada.com" },
+  UA: { name: "United Airlines", url: "https://www.united.com" },
+  F8: { name: "Flair Airlines", url: "https://www.flyflair.com" },
+  AA: { name: "American Airlines", url: "https://www.aa.com" },
+  NH: { name: "ANA", url: "www.ana.co.jp" },
 };
 
 const GRADIENT_COLORS = [
@@ -42,7 +53,6 @@ export default function Results() {
   useEffect(() => {
     setLoading(true);
     
-    // Simulate loading delay for better UX
     setTimeout(() => {
       const filtered = cheapestRoundtrips.filter(
         (flight) => flight.Origin.toUpperCase() === origin.toUpperCase()
@@ -64,7 +74,7 @@ export default function Results() {
       <div className="results-page">
         <div className="loading-container">
           <div className="loading-spinner"></div>
-          <p className="loading-text">Finding the best deals from {origin}...</p>
+          <p className="loading-text">Finding the best deals from {CITY_NAMES[origin] || origin}...</p>
         </div>
       </div>
     );
@@ -80,7 +90,7 @@ export default function Results() {
         </div>
         <div className="no-results">
           <div className="no-results-icon">✈️</div>
-          <h2>No flights found from {origin}</h2>
+          <h2>No flights found from {CITY_NAMES[origin] || origin}</h2>
           <p>Try searching from a different city or check back later for new deals.</p>
           <Link to="/" className="back-button">
             Search Again
@@ -111,9 +121,10 @@ export default function Results() {
             ((item.AveragePrice - item.Price) / item.AveragePrice) * 100
           );
           const savings = item.AveragePrice - item.Price;
+          const airline = AIRLINE_INFO[item.Airline] || { name: item.Airline, url: "#" };
 
           return (
-            <div className="result-card" key={item.Destination}>
+            <div className="result-card" key={`${item.Destination}-${index}`}>
               {cheaperPercent >= 40 && (
                 <div className="savings-badge">
                   🔥 Hot Deal!
@@ -146,15 +157,27 @@ export default function Results() {
                   {cheaperPercent}% cheaper · Save ${savings.toFixed(0)}
                 </div>
 
-                <button className="book-button">
-                    <Link 
-                        to={`/itinerary/${item.Destination}/${item.DepartureDate}/${item.ReturnDate}`}
-                        className="book-button"
-                        style={{ textDecoration: 'none' }}
-                        >
-                        Generate Itinerary
-                    </Link>
-                </button>
+                <div className="airline-info">
+                  ✈️ Cheapest on <strong>{airline.name}</strong>
+                </div>
+
+                <div className="action-buttons">
+                  <Link 
+                    to={`/itinerary/${item.Destination}/${item.DepartureDate}/${item.ReturnDate}`}
+                    className="book-button"
+                  >
+                    Generate Itinerary
+                  </Link>
+                  
+                  <a 
+                    href={airline.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="airline-button"
+                  >
+                    Book on {airline.name}
+                  </a>
+                </div>
               </div>
             </div>
           );

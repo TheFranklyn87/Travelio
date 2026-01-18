@@ -347,3 +347,68 @@
     font-size: 1.5rem;
   }
 }
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  
+  .book-button,
+  .airline-button {
+    width: 100%;
+    background: linear-gradient(135deg, #3B82F6 0%, #4F46E5 100%);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box; /* Important for alignment */
+  }
+  
+  .airline-button {
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  }
+  
+  .book-button:hover {
+    background: linear-gradient(135deg, #2563EB 0%, #4338CA 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+  }
+  
+  .airline-button:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+  }
+  
+  .airline-info {
+    font-size: 0.9rem;
+    color: #6B7280;
+    margin-top: 0.75rem;
+    padding: 0.5rem;
+    background: #F3F4F6;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  
+  /* Make sure result-info has proper structure */
+  .result-info {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+  }
