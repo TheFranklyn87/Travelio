@@ -147,6 +147,21 @@ export default function Itinerary() {
         </div>
 
         <div className="itinerary-content">
+            {/* Gemini Badge */}
+            <div className="gemini-badge">
+                <svg className="gemini-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" fill="url(#gemini-gradient)" />
+                    <defs>
+                        <linearGradient id="gemini-gradient" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stopColor="#4285F4" />
+                            <stop offset="50%" stopColor="#9B72CB" />
+                            <stop offset="100%" stopColor="#D96570" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span className="gemini-text">Powered by Google Gemini</span>
+            </div>
+
             <div className="itinerary-text">
             {itinerary?.itinerary.split('\n').map((line, index) => {
                 line = line.trim();

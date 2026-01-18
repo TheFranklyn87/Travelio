@@ -30,23 +30,23 @@ app.post("/api/itinerary", async (req, res) => {
     const prompt = `Create a day-by-day travel itinerary for ${days} day${days > 1 ? "s" : ""} in ${city} from ${startDate} to ${endDate}. Include attractions, activities, and restaurants. Format clearly.`;
   
     try {
-      const response = await axios.post(
-        `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${GEMINI_KEY}`,
-        {
-          contents: [{ parts: [{ text: prompt }] }]
-        },
-        { headers: { "Content-Type": "application/json" } }
-      );
-  
-      const itinerary = response.data?.candidates?.[0]?.content?.parts?.[0]?.text || "No itinerary generated";
-      res.json({ city, startDate, endDate, itinerary });
+        const response = await axios.post(
+            `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${GEMINI_KEY}`,
+            {
+            contents: [{ parts: [{ text: prompt }] }]
+            },
+            { headers: { "Content-Type": "application/json" } }
+        );
+    
+        const itinerary = response.data?.candidates?.[0]?.content?.parts?.[0]?.text || "No itinerary generated";
+        res.json({ city, startDate, endDate, itinerary });
   
     } catch (err) {
-      console.error(err.response?.data || err.message);
-      res.status(500).json({ error: "Failed to generate itinerary" });
+        console.error(err.response?.data || err.message);
+        res.status(500).json({ error: "Failed to generate itinerary" });
     }
 });
   
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+        console.log(`Server running on port ${PORT}`);
 });

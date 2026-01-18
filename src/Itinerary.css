@@ -189,3 +189,52 @@
         padding: 0;
     }
 }
+
+.gemini-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(135deg, #F8F9FF 0%, #FFF9FB 100%);
+    border: 1.5px solid #E8EAED;
+    border-radius: 2rem;
+    width: fit-content;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.gemini-badge:hover {
+    border-color: #D96570;
+    box-shadow: 0 4px 12px rgba(217, 101, 112, 0.15);
+    transform: translateY(-1px);
+}
+
+.gemini-icon {
+    width: 20px;
+    height: 20px;
+    animation: geminiPulse 2s ease-in-out infinite;
+}
+
+@keyframes geminiPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.gemini-text {
+    font-size: 0.875rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #4285F4 0%, #9B72CB 50%, #D96570 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@media print {
+    .gemini-badge {
+        display: none;
+    }
+}
