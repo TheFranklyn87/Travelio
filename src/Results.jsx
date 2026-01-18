@@ -147,7 +147,13 @@ export default function Results() {
                 </div>
 
                 <button className="book-button">
-                  View Flight Details
+                    <Link 
+                        to={`/itinerary/${item.Destination}/${item.DepartureDate}/${item.ReturnDate}`}
+                        className="book-button"
+                        style={{ textDecoration: 'none' }}
+                        >
+                        Generate Itinerary
+                    </Link>
                 </button>
               </div>
             </div>
