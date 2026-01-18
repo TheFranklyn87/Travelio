@@ -6,7 +6,7 @@
     "ReturnDate": "2026-02-15",
     "Price": 209.79,
     "AveragePrice": 225.45,
-    "Airline": "AC"
+    "Airline": "WS"
   },
   {
     "Origin": "YVR",
@@ -42,7 +42,7 @@
     "ReturnDate": "2026-02-09",
     "Price": 122.37,
     "AveragePrice": 206.57,
-    "Airline": "F8"
+    "Airline": "WS"
   },
   {
     "Origin": "YVR",
@@ -51,7 +51,7 @@
     "ReturnDate": "2026-02-07",
     "Price": 347.13,
     "AveragePrice": 543.48,
-    "Airline": "F8"
+    "Airline": "AC"
   },
   {
     "Origin": "YVR",
@@ -105,7 +105,7 @@
     "ReturnDate": "2026-01-23",
     "Price": 368.32,
     "AveragePrice": 373.03,
-    "Airline": "AC"
+    "Airline": "WS"
   },
   {
     "Origin": "YVR",
