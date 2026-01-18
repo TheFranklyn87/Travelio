@@ -1,0 +1,122 @@
+[
+  {
+    "Origin": "YVR",
+    "Destination": "YUL",
+    "DepartureDate": "2026-02-08",
+    "ReturnDate": "2026-02-15",
+    "Price": 209.79,
+    "AveragePrice": 225.45
+  },
+  {
+    "Origin": "YVR",
+    "Destination": "YOW",
+    "DepartureDate": "2026-02-18",
+    "ReturnDate": "2026-02-23",
+    "Price": 223.65,
+    "AveragePrice": 241.23
+  },
+  {
+    "Origin": "YVR",
+    "Destination": "YYJ",
+    "DepartureDate": "2026-02-01",
+    "ReturnDate": "2026-02-06",
+    "Price": 87.07,
+    "AveragePrice": 87.07
+  },
+  {
+    "Origin": "YVR",
+    "Destination": "YYC",
+    "DepartureDate": "2026-02-01",
+    "ReturnDate": "2026-02-08",
+    "Price": 90.48,
+    "AveragePrice": 142.49
+  },
+  {
+    "Origin": "YVR",
+    "Destination": "YYZ",
+    "DepartureDate": "2026-02-03",
+    "ReturnDate": "2026-02-09",
+    "Price": 122.37,
+    "AveragePrice": 206.57
+  },
+  {
+    "Origin": "YVR",
+    "Destination": "YQB",
+    "DepartureDate": "2026-02-02",
+    "ReturnDate": "2026-02-07",
+    "Price": 347.13,
+    "AveragePrice": 543.48
+  },
+  {
+    "Origin": "YVR",
+    "Destination": "SEA",
+    "DepartureDate": "2026-02-03",
+    "ReturnDate": "2026-02-10",
+    "Price": 167.0,
+    "AveragePrice": 287.9
+  },
+  {
+    "Origin": "YVR",
+    "Destination": "SFO",
+    "DepartureDate": "2026-02-01",
+    "ReturnDate": "2026-02-07",
+    "Price": 195.97,
+    "AveragePrice": 328.63
+  },
+  {
+    "Origin": "YVR",
+    "Destination": "LAS",
+    "DepartureDate": "2026-02-08",
+    "ReturnDate": "2026-02-13",
+    "Price": 181.7,
+    "AveragePrice": 266.97
+  },
+  {
+    "Origin": "YVR",
+    "Destination": "HND",
+    "DepartureDate": "2026-01-18",
+    "ReturnDate": "2026-01-23",
+    "Price": 613.95,
+    "AveragePrice": 636.38
+  },
+  {
+    "Origin": "YVR",
+    "Destination": "LHR",
+    "DepartureDate": "2026-01-18",
+    "ReturnDate": "2026-01-23",
+    "Price": 434.41,
+    "AveragePrice": 441.79
+  },
+  {
+    "Origin": "YVR",
+    "Destination": "CDG",
+    "DepartureDate": "2026-01-18",
+    "ReturnDate": "2026-01-23",
+    "Price": 368.32,
+    "AveragePrice": 373.03
+  },
+  {
+    "Origin": "YVR",
+    "Destination": "JFK",
+    "DepartureDate": "2026-02-08",
+    "ReturnDate": "2026-02-13",
+    "Price": 301.4,
+    "AveragePrice": 402.7
+  },
+  {
+    "Origin": "YVR",
+    "Destination": "LAX",
+    "DepartureDate": "2026-02-08",
+    "ReturnDate": "2026-02-13",
+    "Price": 188.0,
+    "AveragePrice": 291.94
+  },
+  {
+    "Origin": "YVR",
+    "Destination": "DXB",
+    "DepartureDate": "2026-01-21",
+    "ReturnDate": "2026-01-26",
+    "Price": 951.93,
+    "AveragePrice": 982.24
+  }
+]

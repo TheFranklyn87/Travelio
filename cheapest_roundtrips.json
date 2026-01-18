@@ -118,5 +118,213 @@
     "ReturnDate": "2026-01-26",
     "Price": 951.93,
     "AveragePrice": 982.24
+  },
+  {
+    "Origin": "YYZ",
+    "Destination": "YUL",
+    "DepartureDate": "2026-02-08",
+    "ReturnDate": "2026-02-15",
+    "Price": 131.08,
+    "AveragePrice": 215.16
+  },
+  {
+    "Origin": "YYZ",
+    "Destination": "YOW",
+    "DepartureDate": "2026-02-08",
+    "ReturnDate": "2026-02-15",
+    "Price": 123.7,
+    "AveragePrice": 220.33
+  },
+  {
+    "Origin": "YYZ",
+    "Destination": "YYJ",
+    "DepartureDate": "2026-02-08",
+    "ReturnDate": "2026-02-15",
+    "Price": 202.21,
+    "AveragePrice": 317.61
+  },
+  {
+    "Origin": "YYZ",
+    "Destination": "YYC",
+    "DepartureDate": "2026-02-03",
+    "ReturnDate": "2026-02-10",
+    "Price": 157.29,
+    "AveragePrice": 247.07
+  },
+  {
+    "Origin": "YYZ",
+    "Destination": "YVR",
+    "DepartureDate": "2026-02-03",
+    "ReturnDate": "2026-02-10",
+    "Price": 128.33,
+    "AveragePrice": 217.37
+  },
+  {
+    "Origin": "YYZ",
+    "Destination": "YQB",
+    "DepartureDate": "2026-02-08",
+    "ReturnDate": "2026-02-14",
+    "Price": 323.15,
+    "AveragePrice": 471.78
+  },
+  {
+    "Origin": "YYZ",
+    "Destination": "SEA",
+    "DepartureDate": "2026-02-08",
+    "ReturnDate": "2026-02-14",
+    "Price": 201.83,
+    "AveragePrice": 462.39
+  },
+  {
+    "Origin": "YYZ",
+    "Destination": "SFO",
+    "DepartureDate": "2026-02-02",
+    "ReturnDate": "2026-02-09",
+    "Price": 292.75,
+    "AveragePrice": 473.2
+  },
+  {
+    "Origin": "YYZ",
+    "Destination": "LAS",
+    "DepartureDate": "2026-02-01",
+    "ReturnDate": "2026-02-06",
+    "Price": 198.09,
+    "AveragePrice": 247.7
+  },
+  {
+    "Origin": "YYZ",
+    "Destination": "HND",
+    "DepartureDate": "2026-01-18",
+    "ReturnDate": "2026-01-23",
+    "Price": 798.6,
+    "AveragePrice": 810.48
+  },
+  {
+    "Origin": "YYZ",
+    "Destination": "LHR",
+    "DepartureDate": "2026-02-01",
+    "ReturnDate": "2026-02-08",
+    "Price": 434.02,
+    "AveragePrice": 453.81
+  },
+  {
+    "Origin": "YYZ",
+    "Destination": "CDG",
+    "DepartureDate": "2026-01-18",
+    "ReturnDate": "2026-01-23",
+    "Price": 393.77,
+    "AveragePrice": 451.62
+  },
+  {
+    "Origin": "YYZ",
+    "Destination": "JFK",
+    "DepartureDate": "2026-02-08",
+    "ReturnDate": "2026-02-13",
+    "Price": 219.68,
+    "AveragePrice": 282.2
+  },
+  {
+    "Origin": "YYZ",
+    "Destination": "LAX",
+    "DepartureDate": "2026-02-09",
+    "ReturnDate": "2026-02-14",
+    "Price": 276.38,
+    "AveragePrice": 435.54
+  },
+  {
+    "Origin": "YYZ",
+    "Destination": "DXB",
+    "DepartureDate": "2026-01-21",
+    "ReturnDate": "2026-01-27",
+    "Price": 707.02,
+    "AveragePrice": 874.32
+  },
+  {
+    "Origin": "YVR",
+    "Destination": "YLW",
+    "DepartureDate": "2026-01-18",
+    "ReturnDate": "2026-01-23",
+    "Price": 88.51,
+    "AveragePrice": 88.51
+  },
+  {
+    "Origin": "SEA",
+    "Destination": "YUL",
+    "DepartureDate": "2026-02-01",
+    "ReturnDate": "2026-02-06",
+    "Price": 327.64,
+    "AveragePrice": 604.7
+  },
+  {
+    "Origin": "SEA",
+    "Destination": "YOW",
+    "DepartureDate": "2026-02-01",
+    "ReturnDate": "2026-02-06",
+    "Price": 323.65,
+    "AveragePrice": 534.27
+  },
+  {
+    "Origin": "SEA",
+    "Destination": "YYJ",
+    "DepartureDate": "2026-02-08",
+    "ReturnDate": "2026-02-13",
+    "Price": 195.4,
+    "AveragePrice": 399.71
+  },
+  {
+    "Origin": "SEA",
+    "Destination": "YYC",
+    "DepartureDate": "2026-02-01",
+    "ReturnDate": "2026-02-06",
+    "Price": 207.97,
+    "AveragePrice": 398.87
+  },
+  {
+    "Origin": "SEA",
+    "Destination": "YYZ",
+    "DepartureDate": "2026-02-08",
+    "ReturnDate": "2026-02-14",
+    "Price": 234.13,
+    "AveragePrice": 585.68
+  },
+  {
+    "Origin": "SEA",
+    "Destination": "YVR",
+    "DepartureDate": "2026-02-08",
+    "ReturnDate": "2026-02-14",
+    "Price": 186.4,
+    "AveragePrice": 325.58
+  },
+  {
+    "Origin": "SEA",
+    "Destination": "YQB",
+    "DepartureDate": "2026-02-08",
+    "ReturnDate": "2026-02-14",
+    "Price": 556.61,
+    "AveragePrice": 793.51
+  },
+  {
+    "Origin": "SEA",
+    "Destination": "SFO",
+    "DepartureDate": "2026-02-08",
+    "ReturnDate": "2026-02-14",
+    "Price": 100.7,
+    "AveragePrice": 254.22
+  },
+  {
+    "Origin": "SEA",
+    "Destination": "LAS",
+    "DepartureDate": "2026-02-07",
+    "ReturnDate": "2026-02-12",
+    "Price": 57.7,
+    "AveragePrice": 195.36
+  },
+  {
+    "Origin": "SEA",
+    "Destination": "HND",
+    "DepartureDate": "2026-02-07",
+    "ReturnDate": "2026-02-14",
+    "Price": 503.48,
+    "AveragePrice": 608.17
   }
 ]
