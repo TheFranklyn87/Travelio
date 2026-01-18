@@ -21,7 +21,7 @@
 
 - After we get localhost, click the link to go into it
 
-- Come back to vs code and type `cd travel-itinerary`
+- Come back to vs code, make new terminal then type `cd travel-itinerary`
 
 - Then type `node server.js` to run the Gemini API
 
