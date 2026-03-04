@@ -4,46 +4,34 @@ import "./Results.css";
 import cheapestRoundtrips from "./cheapest_roundtrips.json";
 
 const CITY_NAMES = {
-    SEA: "Seattle",
-    SFO: "San Francisco",
-    YYZ: "Toronto",
-    YYC: "Calgary",
-    YUL: "Montreal",
-    JFK: "New York",
-    LAX: "Los Angeles",
-    LAS: "Las Vegas",
-    HND: "Tokyo",
-    LHR: "London",
-    CDG: "Paris",
-    DXB: "Dubai",
-    YQB: "Quebec City",
-    YYJ: "Victoria",
-    YOW: "Ottawa",
-    YVR: "Vancouver",
-    YLW: "Kelowna",
+    SEA: "Seattle", SFO: "San Francisco", YYZ: "Toronto", YYC: "Calgary",
+    YUL: "Montreal", JFK: "New York", LAX: "Los Angeles", LAS: "Las Vegas",
+    HND: "Tokyo", LHR: "London", CDG: "Paris", DXB: "Dubai",
+    YQB: "Quebec City", YYJ: "Victoria", YOW: "Ottawa", YVR: "Vancouver", YLW: "Kelowna",
 };
 
 const AIRLINE_INFO = {
-    WS: { name: "WestJet", url: "https://www.westjet.com" },
-    AC: { name: "Air Canada", url: "https://www.aircanada.com" },
-    UA: { name: "United Airlines", url: "https://www.united.com" },
-    F8: { name: "Flair Airlines", url: "https://www.flyflair.com" },
-    AA: { name: "American Airlines", url: "https://www.aa.com" },
-    NH: { name: "ANA", url: "www.ana.co.jp" },
+    WS: { name: "WestJet", url: "https://www.westjet.com", initials: "WS" },
+    AC: { name: "Air Canada", url: "https://www.aircanada.com", initials: "AC" },
+    UA: { name: "United Airlines", url: "https://www.united.com", initials: "UA" },
+    F8: { name: "Flair Airlines", url: "https://www.flyflair.com", initials: "F8" },
+    AA: { name: "American Airlines", url: "https://www.aa.com", initials: "AA" },
+    NH: { name: "ANA", url: "https://www.ana.co.jp", initials: "NH" },
 };
 
-const GRADIENT_COLORS = [
-    "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-    "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-    "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-    "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
-    "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
-    "linear-gradient(135deg, #30cfd0 0%, #330867 100%)",
-    "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
-    "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
-    "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
-    "linear-gradient(135deg, #ff6e7f 0%, #bfe9ff 100%)",
-];
+// Generate a fake departure time for display purposes
+const fakeTimes = ["06:15", "08:40", "10:20", "13:05", "15:30", "17:50", "19:10", "21:35"];
+const fakeDurations = ["5h 10m", "6h 25m", "4h 50m", "7h 00m", "5h 40m", "6h 05m", "8h 20m", "4h 35m"];
+
+function addMinutes(time, minsStr) {
+    const [h, m] = time.split(":").map(Number);
+    const match = minsStr.match(/(\d+)h\s*(\d+)m/);
+    if (!match) return time;
+    const total = h * 60 + m + parseInt(match[1]) * 60 + parseInt(match[2]);
+    const rh = String(Math.floor(total / 60) % 24).padStart(2, "0");
+    const rm = String(total % 60).padStart(2, "0");
+    return `${rh}:${rm}`;
+}
 
 export default function Results() {
     const { origin } = useParams();
@@ -52,137 +40,143 @@ export default function Results() {
 
     useEffect(() => {
         setLoading(true);
-        
         setTimeout(() => {
-        const filtered = cheapestRoundtrips.filter(
-            (flight) => flight.Origin.toUpperCase() === origin.toUpperCase()
-        );
-
-        filtered.sort((a, b) => a.Price / a.AveragePrice - b.Price / b.AveragePrice);
-
-        setResults(filtered);
-        setLoading(false);
+            const filtered = cheapestRoundtrips.filter(
+                (flight) => flight.Origin.toUpperCase() === origin.toUpperCase()
+            );
+            filtered.sort((a, b) => a.Price / a.AveragePrice - b.Price / b.AveragePrice);
+            setResults(filtered);
+            setLoading(false);
         }, 800);
     }, [origin]);
 
-    const getGradient = (index) => {
-        return GRADIENT_COLORS[index % GRADIENT_COLORS.length];
-    };
-
     if (loading) {
         return (
-        <div className="results-page">
-            <div className="loading-container">
-            <div className="loading-spinner"></div>
-            <p className="loading-text">Finding the best deals from {CITY_NAMES[origin] || origin}...</p>
+            <div className="results-page">
+                <div className="loading-container">
+                    <div className="loading-spinner"></div>
+                    <p className="loading-text">Searching flights from {CITY_NAMES[origin] || origin}...</p>
+                </div>
             </div>
-        </div>
         );
     }
 
     if (!results.length) {
         return (
-        <div className="results-page">
-            <div className="results-header">
-            <Link to="/" className="back-button">
-                ← Back to Home
-            </Link>
+            <div className="results-page">
+                <div className="results-topbar">
+                    <Link to="/" className="back-button">← Back</Link>
+                </div>
+                <div className="no-results">
+                    <div className="no-results-icon">✈️</div>
+                    <h2>No flights found from {CITY_NAMES[origin] || origin}</h2>
+                    <p>Try searching from a different city or check back later.</p>
+                    <Link to="/" className="back-button">Search Again</Link>
+                </div>
             </div>
-            <div className="no-results">
-            <div className="no-results-icon">✈️</div>
-            <h2>No flights found from {CITY_NAMES[origin] || origin}</h2>
-            <p>Try searching from a different city or check back later for new deals.</p>
-            <Link to="/" className="back-button">
-                Search Again
-            </Link>
-            </div>
-        </div>
         );
     }
 
     return (
         <div className="results-page">
-        <div className="results-header">
-            <Link to="/" className="back-button">
-            ← Back to Home
-            </Link>
-            <h2>Best destinations from {CITY_NAMES[origin] || origin}</h2>
-            <p className="results-subtitle">
-            Discover amazing deals on flights from your city
-            </p>
-            <div className="results-count">
-            ✨ {results.length} incredible {results.length === 1 ? 'deal' : 'deals'} found
+            {/* Top bar */}
+            <div className="results-topbar">
+                <Link to="/" className="back-button">← Back</Link>
+                <div className="results-route">
+                    <span className="route-origin">{CITY_NAMES[origin] || origin}</span>
+                    <span className="route-arrow">→</span>
+                    <span className="route-dest">All Destinations</span>
+                </div>
+                <div className="results-count-pill">{results.length} flights found</div>
             </div>
-        </div>
 
-        <div className="results-grid">
-            {results.map((item, index) => {
-            const cheaperPercent = Math.round(
-                ((item.AveragePrice - item.Price) / item.AveragePrice) * 100
-            );
-            const savings = item.AveragePrice - item.Price;
-            const airline = AIRLINE_INFO[item.Airline] || { name: item.Airline, url: "#" };
+            {/* Cheapest notice */}
+            <div className="results-notice">
+                Showing cheapest available fares · Prices per person, round-trip
+            </div>
 
-            return (
-                <div className="result-card" key={`${item.Destination}-${index}`}>
-                {cheaperPercent >= 40 && (
-                    <div className="savings-badge">
-                    🔥 Hot Deal!
-                    </div>
-                )}
+            {/* Flight list */}
+            <div className="flight-list">
+                {results.map((item, index) => {
+                    const cheaperPercent = Math.round(
+                        ((item.AveragePrice - item.Price) / item.AveragePrice) * 100
+                    );
+                    const airline = AIRLINE_INFO[item.Airline] || { name: item.Airline, url: "#", initials: item.Airline };
+                    const depTime = fakeTimes[index % fakeTimes.length];
+                    const duration = fakeDurations[index % fakeDurations.length];
+                    const arrTime = addMinutes(depTime, duration);
+                    const depDate = new Date(item.DepartureDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                    const retDate = new Date(item.ReturnDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 
-                <div className="result-info">
-                    <h3>
-                    {CITY_NAMES[item.Destination] || item.Destination}
-                    <span className="airport-code">{item.Destination}</span>
-                    </h3>
+                    return (
+                        <div className="flight-row" key={`${item.Destination}-${index}`}>
+                            {cheaperPercent >= 15 && (
+                                <div className="flight-badge">
+                                    {cheaperPercent}% cheaper than average
+                                </div>
+                            )}
+                            <div className="flight-row-main">
+                                {/* Airline */}
+                                <div className="flight-airline">
+                                    <div className="airline-logo">{airline.initials}</div>
+                                    <span className="airline-name">{airline.name}</span>
+                                </div>
 
-                    <p className="dates">
-                    {new Date(item.DepartureDate).toLocaleDateString('en-US', { 
-                        month: 'short', 
-                        day: 'numeric' 
-                    })} → {new Date(item.ReturnDate).toLocaleDateString('en-US', { 
-                        month: 'short', 
-                        day: 'numeric',
-                        year: 'numeric'
-                    })}
-                    </p>
+                                {/* Times */}
+                                <div className="flight-times">
+                                    <div className="flight-time-block">
+                                        <span className="flight-time">{depTime}</span>
+                                        <span className="flight-code">{origin}</span>
+                                    </div>
+                                    <div className="flight-duration-block">
+                                        <span className="flight-duration">{duration}</span>
+                                        <div className="flight-line"><div className="flight-dot left"></div><div className="flight-dot right"></div></div>
+                                        <span className="flight-stops">Direct</span>
+                                    </div>
+                                    <div className="flight-time-block">
+                                        <span className="flight-time">{arrTime}</span>
+                                        <span className="flight-code">{item.Destination}</span>
+                                    </div>
+                                </div>
 
-                    <div className="price-container">
-                    <div className="price">${item.Price.toFixed(0)}</div>
-                    <div className="avg">was ${item.AveragePrice.toFixed(0)}</div>
-                    </div>
+                                {/* Destination */}
+                                <div className="flight-dest">
+                                    <span className="dest-city">{CITY_NAMES[item.Destination] || item.Destination}</span>
+                                    <span className="dest-dates">{depDate} → {retDate}</span>
+                                </div>
 
-                    <div className="deal">
-                    {cheaperPercent}% cheaper · Save ${savings.toFixed(0)}
-                    </div>
-
-                    <div className="airline-info">
-                    ✈️ Cheapest on <strong>{airline.name}</strong>
-                    </div>
-
-                    <div className="action-buttons">
-                    <Link 
-                        to={`/itinerary/${item.Destination}/${item.DepartureDate}/${item.ReturnDate}`}
-                        className="book-button"
-                    >
-                        Generate Itinerary
-                    </Link>
-                    
-                    <a 
-                        href={airline.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="airline-button"
-                    >
-                        Book on {airline.name}
-                    </a>
-                    </div>
-                </div>
-                </div>
-            );
-            })}
-        </div>
+                                {/* Price + actions */}
+                                <div className="flight-price-block">
+                                    <div className="flight-price">CAD {item.Price.toFixed(0)}<span className="per-pax">/pax</span></div>
+                                    {item.AveragePrice > item.Price && (
+                                        <div className="flight-was">was CAD {item.AveragePrice.toFixed(0)}</div>
+                                    )}
+                                    <div className="flight-actions">
+                                        <Link
+                                            to={`/itinerary/${item.Destination}/${item.DepartureDate}/${item.ReturnDate}`}
+                                            className="btn-itinerary"
+                                        >
+                                            Itinerary
+                                        </Link>
+                                        <a
+                                            href={airline.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="btn-book"
+                                        >
+                                            Book →
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="flight-row-footer">
+                                <span className="refund-tag">Refund allowed</span>
+                                <span className="flight-class">Economy · Round-trip</span>
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 }
